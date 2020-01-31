@@ -1,6 +1,6 @@
 import numpy as np
 import random
-C = [2,4,6,3,1,7,4,3,6,4]
+C = [2,4,6,3,1,7,4,2,3,8]
 N = len(C)
 Q = np.zeros([N,N])
 for i in range(N):
@@ -25,7 +25,7 @@ def GetEnergy2(spin):
     return e ** 2
 
 def GetResult(spin):
-    print("---result---")
+    print("------ result ------")
     print(spin)
     print("energy : %d" % GetEnergy(spin))
     print("energy2 : %d" % GetEnergy2(spin))
@@ -38,8 +38,8 @@ def GetResult(spin):
             sum2 += C[i]
     print("sum1 : %d  sum2 : %d" % (sum1,sum2))
 
-S = 100
-T = 1
+S = 1000
+T = 0.1
 spin = np.random.randint(0,2,N)
 for s in range(S):
     for i in range(N):
