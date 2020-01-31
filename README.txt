@@ -1,0 +1,1 @@
+demos of ising model and QUBO
