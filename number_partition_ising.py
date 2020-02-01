@@ -20,17 +20,19 @@ def GetResult(spin):
     print(spin)
     print("energy : %d" % GetEnergy(spin))
     print("energy2 : %d" % GetEnergy2(spin))
-    sum1 = 0
-    sum2 = 0
+    c1 = []
+    c2 = []
     for i in range(N):
         if spin[i] == 1:
-            sum1 += C[i]
+            c1.append(C[i])
         elif spin[i] == -1:
-            sum2 += C[i]
-    print("sum1 : %d  sum2 : %d" % (sum1,sum2))
+            c2.append(C[i])
+    print(c1)
+    print(c2)
+    print("sum1 : %d  sum2 : %d" % (sum(c1),sum(c2)))
 
 #C = [2,10,3,8,5,7,9,5,3,2]
-C = np.random.randint(-11,11,100)
+C = np.random.randint(-100,100,20)
 print(C)
 N = len(C)
 h = np.zeros([N,N])
@@ -39,7 +41,7 @@ for i in range(N):
     for j in range(i + 1, N):
         J[i][j] = 2 * C[i] * C[j]
 J = J + J.T * (1-np.eye(N))
-print(J)
+#print(J)
 
 spin = np.random.randint(0,2,N) * 2 - 1
 GetResult(spin)
