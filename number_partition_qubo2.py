@@ -1,6 +1,7 @@
 import numpy as np
 import random
-C = np.random.randint(1,11,100)
+#C = np.random.randint(1,11,100)
+C = [2,4,6]
 print(C)
 N = len(C)
 Q = np.zeros([N,N])

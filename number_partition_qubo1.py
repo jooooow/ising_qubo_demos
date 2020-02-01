@@ -1,6 +1,6 @@
 import numpy as np
 import random
-C = [2,4,6,3,1,7,4,2,3,8]
+C = [2,10,3,8,5,7,9,5,3,2]
 N = len(C)
 Q = np.zeros([N,N])
 for i in range(N):
